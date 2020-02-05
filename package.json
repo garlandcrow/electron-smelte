@@ -10,6 +10,7 @@
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^1.2.0",
     "autoprefixer": "^9.6.0",
+    "chokidar": "^3.3.1",
     "electron": "^8.0.0",
     "npm-run-all": "^4.1.5",
     "postcss": "^7.0.17",
@@ -38,7 +39,9 @@
     "start": "sirv public",
     "start:dev": "sirv public --dev",
     "pure-electron": "electron .",
-    "electron": "yarn build && yarn pure-electron"
+    "pure-electron:dev": "NODE_ENV=development electron .",
+    "tron": "run-s build pure-electron",
+    "tron:dev": "run-p dev pure-electron:dev"
   },
   "dependencies": {
     "postcss-input-range": "^4.0.0",
