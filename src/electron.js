@@ -1,3 +1,7 @@
+// all setup using the guide available at
+// https://dev.to/o_a_e/getting-started-with-electron-and-svelte-2gn8
+// https://github.com/jzillmann/template-electron-svelte
+
 const { app, BrowserWindow } = require('electron')
 const path = require('path')
 
